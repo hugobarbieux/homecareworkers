@@ -8,7 +8,8 @@ body{
 }
 
 html {
-  scroll-behavior: smooth;overflow-x: hidden;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 /**Le clear du div entre les dataviz**/
 .clear{clear:left;}
@@ -163,12 +164,12 @@ border-color: #111 transparent transparent transparent;
   background: url('img/boards.jpg') no-repeat center;
   background-size: cover;
   background-attachment: fixed;
-  height: 750px;
+  height: 700px;
 }
 
 /*----------------- -------Style de data section------------------------------*/
 
-.datasection{ 
+.datasection{
 /**C'était une hauteur qui faisait buguer l'histoire, c'est supprimé ! **/
 }
 
