@@ -56,7 +56,7 @@ iframe{width:100%!important;}
   left: 0;
   background-color: #000000;
   z-index: 1;
-  opacity: 0.60;
+  opacity: 0.40;
 }
 
 .headercontent{
@@ -69,10 +69,10 @@ iframe{width:100%!important;}
 }
 
 .headercontent p{
-  font-size: 2rem;
+  font-size: 2.3rem;
   display: block;
-  padding-left: 5rem;
-  padding-right: 5rem;
+  padding-left: 9rem;
+  padding-right: 9rem;
   padding-bottom: 2rem;
 }
 
@@ -138,7 +138,7 @@ border-color: #111 transparent transparent transparent;
 
 /*--------------------------Section pour la story-----------------------------*/
 .introsection{
-  height: 100vh;
+  height: 120vh;
 }
 
 .container{
@@ -150,12 +150,27 @@ border-color: #111 transparent transparent transparent;
   font-size: 50px;
 }
 
+.container h2{
+  font-size: 30px;
+  font-style: italic;
+}
+
+.container h3{
+  font-size: 18px;
+}
+
+.container h4{
+  font-size: 20px;
+  font-weight: bold;
+}
+
 .container p{
   font-size: 18px;
 }
 
 /*----------------------------------Parallax---------------------------------*/
 .parallaxcontainer{
+  width: 100%;
   text-align: left; /**J'ai supprimé du style ici et en ai ajouté**/
   padding-bottom:0!important;
 }
