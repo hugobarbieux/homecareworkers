@@ -1,37 +1,28 @@
-*{
-  box-sizing:border-box;
-}
-
-body{
-  margin: 0;
-  overflow-x: hidden;
-}
-
-html {
-  scroll-behavior: smooth;
-  overflow-x: hidden;
-}
+*{box-sizing:border-box;}
+body{margin: 0;overflow: hidden;}
+html {scroll-behavior: smooth;overflow-x: hidden;}
 /**Le clear du div entre les dataviz**/
 .clear{clear:left;}
 /**Pour les iframe de Tableau**/
 iframe{width:100%!important;}
 .dataviz{text-align:center;}
+a,#up{-webkit-transition: all 0.4s linear 0s; -moz-transition: all 0.4s linear 0s; transition: all 0.4s linear 0s !important;}
 
 /*---------------------------------Header-----------------------------------*/
 
 .videoheader{
   height:100vh;
-  display:flex;
+  display:table;
   align-items:center;
   color:#fff;
+  overflow:hidden;
 }
 
 .videocontainer{
-  max-width: 960px
-  padding-left: 1rem;
-  padding-right: 1rem;
+  max-width: 100%;
   margin: auto;
   text-align: center;
+  overflow:hidden;
 }
 
 .fullscreenvideo{
@@ -43,24 +34,20 @@ iframe{width:100%!important;}
   overflow: hidden;
 }
 
-.fullscreenvideo video{
-  min-width: 100%;
-  min-height: 100%;
-}
-
 .headeroverlay{
   height: 100vh;
   width: 100vw;
   position:absolute;
-  top: 25;
+  top: 0;
   left: 0;
-  background-color: #000000;
   z-index: 1;
-  opacity: 0.40;
+  overflow:hidden;
 }
 
 .headercontent{
   z-index: 2;
+  display:table-cell;
+  vertical-align:middle;
 }
 
 .headercontent h1{
@@ -137,9 +124,6 @@ border-color: #111 transparent transparent transparent;
   }
 
 /*--------------------------Section pour la story-----------------------------*/
-.introsection{
-  height: 125vh;
-}
 
 .container{
   padding-top: 3rem;
@@ -194,7 +178,6 @@ border-color: #111 transparent transparent transparent;
 
 /*--------------------------Section pour le podcast --------------------------*/
 .podcastsection{
-  height: 100vh;
   background: #333;
   color:#fff;
   position:relative;
@@ -203,7 +186,18 @@ border-color: #111 transparent transparent transparent;
 .podcastcontainer{
   padding: 3rem;
 }
+/**Scroll**/
+#scroll{position:fixed;top:30px;left:-5px;font-size:22px;z-index:99999;display:none;}
+#scroll a{color:#CDCDCD;}
+#scroll a:hover,#scroll .active a{opacity:0.4;}
+#scroll li a:hover,#scroll li a:focus,#scroll li a:active,#scroll li:hover,#scroll li:focus,#scroll li:active{background:none!important;}
+#scroll li{margin-bottom:-10px;}
+.tooltip-inner{width:120px;padding:3px 8px;}
 
+/**UP**/
+#up{position:fixed;right:20px;bottom:20px;z-index:999;font-size:34px;cursor:pointer;display:none;}
+#up a{color:#CDCDCD;}
+#up:hover{opacity:0.7;}
 
 @media(max-width:960px){
   .container{
@@ -213,4 +207,7 @@ border-color: #111 transparent transparent transparent;
 }
 @media(max-width:770px){
 	.headercontent h1 {font-size: 3.5em;}
+	.headercontent p {padding-left: 2rem;padding-right: 2rem;padding-bottom: 30px;}
+	.arrow-wrap {top:20px;}
+	#up{position:relative;width:100%;text-align:center;padding:30px 0;left:0;right:0;bottom:0;float:none;}
 }
